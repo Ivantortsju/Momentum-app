@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+    background: none;
+}
+
+.container {
+    text-align: center;
+    color: black;
+    width: 100%;
+    padding: 20px;
+}
+
+.greeting {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#nameInput {
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.todo-window {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 15px;
+    border: 2px solid black;
+    display: none;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.todo-list {
+    list-style-type: disc;
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete-btn {
+    margin-left: 10px;
+    border: none;
+    background: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+li:hover .delete-btn {
+    display: inline;
+}
+
+.toggle-btn,
+.bg-btn {
+    position: fixed;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.toggle-btn {
+    top: 10px;
+    left: 10px;
+    background: black;
+    color: white;
+}
+
+.bg-btn {
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.time-date {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 15px;
+    line-height: 0.5;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quotes-section {
+    margin-top: 30px;
+    text-align: center;
+    color: #333;
+    padding: 10px;
+}
+
+#quoteDisplay {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 15px;
+    line-height: 0.5;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#quoteInput {
+    font-size: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    text-align: center;
+    outline: none;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    transition: border-color 0.3s;
+}
+
+#quoteInput:focus {
+    border-color: #007BFF;
+    /* Highlight the input field when focused */
+}
+
+
+@media (max-width: 600px) {
+    .todo-window {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .toggle-btn,
+    .bg-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .greeting {
+        font-size: 24px;
+    }
+
+    #nameInput {
+        font-size: 24px;
+    }
+
+    .time-date {
+        font-size: 18px;
+    }
+}

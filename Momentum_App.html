@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum App</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button class="toggle-btn" onclick="toggleTodoWindow()">To-Do</button>
+    <div class="todo-window" id="todoWindow">
+        <button class="close-btn" onclick="closeTodoWindow()">×</button>
+        <h3>To-Do List</h3>
+        <input type="text" id="todoInput" placeholder="Add a task">
+        <ul id="todoList" class="todo-list"></ul>
+        <div id="progressTracker">Progress: 0/0 (0%)</div>
+    </div>
+
+    <div class="container">
+        <div class="greeting">
+            <span id="greetText">Hello, </span>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+        </div>
+    </div>
+
+    <div class="quotes-section">
+        <div id="quoteDisplay" class="quote-text">"Welcome to the Momentum App!"</div>
+        <input type="text" id="quoteInput" placeholder="...." />
+    </div>
+
+    <div class="time-date" id="timeDate"></div>
+
+    <button class="bg-btn" onclick="changeBackground()">Change Background</button>
+
+
+</body>
+
+</html>
